@@ -1,0 +1,22 @@
+{
+  "name": "contructorhangman",
+  "version": "1.0.0",
+  "description": "An node npm hangman game.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BakerShoeMaker/ConstructorHangman.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BakerShoeMaker/ConstructorHangman/issues"
+  },
+  "homepage": "https://github.com/BakerShoeMaker/ConstructorHangman#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  }
+}
