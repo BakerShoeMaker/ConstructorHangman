@@ -1,20 +1,11 @@
 var inquirer = require('inquirer');
+var inputOfUser="";
+var letterArray = [];
+var wordBank = ["dog", "cat", "frog", "lion","bear"];
+var wordToGuess;
+var word = require('./word.js');
+var word = require('./letter.js');
 
-/*
- // constructor function used to create programmers objects
- function Programmer(name, position, age, language) {
- this.name = name;
- this.position = position;
- this.age = age;
- this.language = language;
- }
-
- // creates the printInfo method and applies it to all programmer objects
- Programmer.prototype.printInfo = function() {
- console.log("Name: " + this.name + "\nPosition: " + this.position + "\nAge: " +
- this.age + "\nLanguages: " + this.language);
- };
-*/
 
 /*Used to create an object representing the current word the user
 is attempting to guess. This should contain word specific logic and data.*/
@@ -42,18 +33,39 @@ function runInquire(){
             message: "Guess a letter the word."
         }]
     ).then(function (answers) {
-        var inputOfUser = new Word(answers.letter);
+        inputOfUser = new Word(answers.letter);
         inputOfUser.printInfo();
-        //console.log(answers.word);
+
+        //Push the letter into the array
+        letterArray.push(answers.letter);
+        console.log("The letter is: " , letterArray);
     });
 
     //If all letters are guessed then stop the program.
     //If all letters are NOT guessed then call again.
     //runInquire();//keeps repeating the question.
 
+    //Put letter in an array
+    //Check the letter
+    //checkEachLetter();
+}
+
+function checkEachLetter()
+{
+    for(var i =0; i< wordToGuess.length; i++)
+    {
+        wordToGuess.charAt(i);
+        console.log(wordToGuess.charAt(i));
+    }
 }
 
 
+/*function generateWord()
+{
+    var calculateWordPosition = Math.floor(Math.random() * wordBank.length);
+    currentWordToGuess = wordBank[calculateWordPosition];
+    console.log(currentWordToGuess);
+}*/
 
 /*You must keep track of the user's remaining guesses and prompt the user if they would
 like to end the game if none remain. Each constructor function should be in it's own file and be exported and
